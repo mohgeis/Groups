@@ -1,0 +1,32 @@
+#Group 1:
+A
+B
+C
+D
+E
+#Group 2:
+F
+G
+H
+I
+#Group 3:
+J
+K
+L
+#Group 4:
+M
+N
+O
+P
+Q
+R
+S
+#Gruop 5:
+T
+U
+V
+W
+#Gruop 6:
+X
+Y
+Z
