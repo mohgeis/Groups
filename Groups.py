@@ -1,15 +1,9 @@
 from Group import Group
 from random import shuffle
-from itertools import cycle
-from time import sleep
 
 class Groups(object):
-    """
 
-    """
     def __init__(self):
-        """Return a Customer object whose name is *name* and starting
-        balance is *balance*."""
         self.groups_list = []
 
     def __str__(self):
@@ -30,14 +24,18 @@ class Groups(object):
         return self
 
     def add_group(self,  group):
-        """Return the balance remaining after withdrawing *amount*
-        dollars."""
+
         group.shuffle()
         order = self.find_order(group)
         self.groups_list.insert(order, group)
         return self
 
     def get_team(self, team_size):
+        """
+        get a member from each group
+        :param team_size: howmany members to get
+        :return: members names
+        """
         team = []
         for num in range(0,team_size):
             try:
@@ -50,17 +48,18 @@ class Groups(object):
         return team
 
 
-
 if __name__ == "__main__":
     all_groups = Groups()
-    all_groups.add_group(Group("3"))
-    all_groups.add_group(Group("4"))
+    all_groups.add_group(Group("H").add_member(["h1", "h2"]))
+    all_groups.add_group(Group("M").add_member(["m1","m2","m3","m4"]))
+    all_groups.add_group(Group("Z").add_member(["z1","z2","z3"]))
     print (all_groups)
     print (all_groups.sort_groups())
-    print(all_groups.sort_groups())
-    print(all_groups.sort_groups())
 
     while True:
-        print (all_groups.get_team(3))
-        print(all_groups.sort_groups())
-        sleep (1)
+        t = all_groups.get_team(2)
+        print ()
+        print ("team: ", t)
+        if len(t) < 2:
+            break
+        print("left: " ,all_groups.sort_groups())
