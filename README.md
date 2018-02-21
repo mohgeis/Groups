@@ -1,5 +1,7 @@
 # Groups
-Create mixed teams from already existing groups (list from lists)
+Create mixed teams from already existing groups (list from lists, or Fika list from teams) 
+
+link: https://github.com/mohgeis/Groups
 
 ### Example:
 
